@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+   --twitter-color: #50b7f5;
+   --twitter-background: #e6ecf0;
+}
+
+.Twitter-Logo {
+    width: 60px;
+    padding-left: 18px;
+}
+
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    font-weight: 800;
+}
+
+.sidebarOption h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.sidebarOption:hover {
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+}
+
+.sidebar-tweet {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    background-color: var(--twitter-color);
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.right-sidebar {
+   border-right: 1px solid var(--twitter-background); 
+   flex: 0.2; 
+   min-width: 250px;
+   margin-top: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+.Feed {
+    flex: 0.5;
+    border-right: 1px solid var(--twitter-background);
+    max-width: 800px;
+    overflow-y: scroll;
+}
+
+.feed-header {
+    position: sticky;
+    top: 0%;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background);
+    padding: 15px 20px;
+}
+
+.feed-header h2 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.Feed::-webkit-scrollbar {
+    display: none;
+}
+
+.Feed {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tweetbox-feed {
+    padding-bottom: 10px;
+    border-bottom: 8px solid var(--twitter-background);
+    padding-right: 10px;
+}
+
+.tweetbox-feed form {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweetbox-input {
+    display: flex;
+    padding: 20px;
+}
+
+.tweetbox-input input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.tweet-btn {
+   background-color: var(--twitter-color); 
+   border: none;
+   color: white;
+   border-radius: 30px;
+   font-weight: 900;
+   width: 80px;
+   height: 40px;
+   margin-top: 20px;
+   margin-left: auto;
+   cursor: pointer;
+}
+
+.profile-picture {
+    width: 24px;
+    height: 24px;
+}
+
+.post-headerSpecial-icon {
+    width: 14px !important;
+    margin-right: 5px;
+}
+
+.post-avatar img {
+    border-radius: 50%;
+}
+
+.post {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--twitter-background);
+    padding-bottom: 10px;
+}
+
+.post-body .main-img {
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.post-headerSpecial {
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+}
+
+.post-headertext h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.post-headerDescription {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.post-body {
+    flex: 1;
+    padding: 10px;
+}
+
+.post-avatar {
+    padding: 20px;
+}
+
+.widgets {
+    flex: 0.3;
+    max-width: 400px;
+}
+
+.widgets-input {
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.widgets-input input {
+    border: none;
+    background-color: var(--twitter-background);
+    outline: none;
+}
+
+.widgets-input i {
+    color: grey;   
+}
+
+.widgets-container {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+.widgets-container h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+    .widgets {
+        flex: 0.25;
+    }
+}
+
+@media (max-width: 768px) {
+    .Feed {
+        flex: 1;
+    }
+
+    .right-sidebar, .widgets {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebarOption h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .sidebarOption h2 {
+        font-size: 14px;
+    }
+}
